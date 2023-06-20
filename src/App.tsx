@@ -1,7 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { MessageContextProvider } from "./context";
 function App() {
   return (
     <div className="App">
@@ -19,6 +19,12 @@ function App() {
           Learn React
         </a>
       </header>
+      <MessageContextProvider
+        email="muzman@muzman.com"
+        name="muzman@muzman.com"
+      >
+        <h1>selam</h1>
+      </MessageContextProvider>
     </div>
   );
 }
